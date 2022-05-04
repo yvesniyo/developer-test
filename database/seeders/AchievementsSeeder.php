@@ -27,94 +27,12 @@ class AchievementsSeeder extends Seeder
         $badge_repo = app(BadgeRepository::class);
 
 
-        /*
-        - First Lesson Watched
-        - 5 Lessons Watched
-        - 10 Lessons Watched
-        - 25 Lessons Watched
-        - 50 Lessons Watched
-        */
 
-        $lesson_achievements = [
-            [
-                "name" => "First Lesson Watched",
-                "watches" => 1,
-            ],
-            [
-                "name" => "5 Lessons Watched",
-                "watches" => 5,
-            ],
-            [
-                "name" => "10 Lessons Watched",
-                "watches" => 10,
-            ],
-            [
-                "name" => "25 Lessons Watched",
-                "watches" => 25,
-            ],
-            [
-                "name" => "50 Lessons Watched",
-                "watches" => 50,
-            ],
-        ];
+        $lesson_achievements = config("achievements.lesson_achievements");
 
+        $comment_achievements = config("achievements.comment_achievements");
 
-
-        /*
-        - First Comment Written
-        - 3 Comments Written
-        - 5 Comments Written
-        - 10 Comment Written
-        - 20 Comment Written
-         */
-        $comment_achievements = [
-            [
-                "name" => "First Comment Written",
-                "comments" =>  1,
-            ],
-            [
-                "name" => "3 Comments Written",
-                "comments" =>  3,
-            ],
-            [
-                "name" => "5 Comments Written",
-                "comments" =>  5,
-            ],
-            [
-                "name" => "10 Comments Written",
-                "comments" =>  10,
-            ], [
-                "name" => "20 Comments Written",
-                "comments" =>  20,
-            ]
-        ];
-
-        /*
-        - Beginner: 0 Achievements
-        - Intermediate: 4 Achievements
-        - Advanced: 8 Achievements
-        - Master: 10 Achievements
-        */
-        $badges = [
-            [
-                "name" => "Beginner",
-                "achievements" => 0,
-            ],
-            [
-                "name" => "Intermediate",
-                "achievements" => 4,
-            ],
-            [
-                "name" => "Advanced",
-                "achievements" => 8,
-            ],
-            [
-                "name" => "Master",
-                "achievements" =>  10,
-            ],
-
-        ];
-
+        $badges = config("achievements.badges");
 
 
 
