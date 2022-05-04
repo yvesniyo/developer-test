@@ -38,18 +38,30 @@ class AchievementsSeeder extends Seeder
 
         //Add lesson achievments
         foreach ($lesson_achievements as $lesson_achievement) {
-            $lesson_achievement_repo->create($lesson_achievement);
+            $alreadyExists = $lesson_achievement_repo->allQuery()
+                ->where($lesson_achievement)
+                ->exists();
+            if (!$alreadyExists)
+                $lesson_achievement_repo->create($lesson_achievement);
         }
 
 
         //Add comments achievments
         foreach ($comment_achievements as $comment_achievement) {
-            $comment_achievement_repo->create($comment_achievement);
+            $alreadyExists = $comment_achievement_repo->allQuery()
+                ->where($comment_achievement)
+                ->exists();
+            if (!$alreadyExists)
+                $comment_achievement_repo->create($comment_achievement);
         }
 
         //add badges
         foreach ($badges as $badge) {
-            $badge_repo->create($badge);
+            $alreadyExists = $badge_repo->allQuery()
+                ->where($badge)
+                ->exists();
+            if (!$alreadyExists)
+                $badge_repo->create($badge);
         }
     }
 }
