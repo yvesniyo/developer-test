@@ -44,4 +44,9 @@ class UserFactory extends Factory
             ];
         });
     }
+
+    protected function withFaker()
+    {
+        return \Faker\Factory::create('en');
+    }
 }

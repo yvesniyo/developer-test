@@ -15,7 +15,7 @@ class LessonSeeder extends Seeder
     public function run()
     {
         $lessons = Lesson::factory()
-            ->count(20)
+            ->count(100)
             ->create();
     }
 }

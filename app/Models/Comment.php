@@ -6,6 +6,18 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * Class Comment
+ * @package App\Models
+ *
+ * @property int $id
+ * @property string $body
+ * @property int $user_id
+ * @property \App\Models\User $user
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ */
+
 class Comment extends Model
 {
     use HasFactory;

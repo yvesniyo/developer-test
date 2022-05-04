@@ -5,25 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
- * Class Lesson
+ * Class CommentAchievement
  * @package App\Models
  *
  * @property int $id
- * @property string $title
+ * @property string $name
+ * @property int $comments
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  */
-class Lesson extends Model
+class CommentAchievement extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'title'
-    ];
+
+    protected $table = "comment_achievements";
 }

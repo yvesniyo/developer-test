@@ -7,6 +7,24 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * Class User
+ * @package App\Models
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $email
+ * @property string $password
+ * @property \Illuminate\Database\Eloquent\Collection $comments
+ * @property \Illuminate\Database\Eloquent\Collection $lessons
+ * @property \Illuminate\Database\Eloquent\Collection $watched
+ * @property string $remember_token
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property \Carbon\Carbon $email_verified_at
+ */
+
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
